@@ -10,6 +10,7 @@ FROM
     orderdetails ON products.productCode = orderdetails.productCode
         INNER JOIN
     orders ON orderdetails.orderNumber = orders.orderNumber
-    WHERE orders.status='Cancelled'
-    GROUP BY prodName, prodLine, numInStock
-    ORDER BY prodLine, numCancelled DESC;
+WHERE
+    orders.status = 'Cancelled'
+GROUP BY prodName , prodLine , numInStock
+ORDER BY prodLine , numCancelled DESC;
