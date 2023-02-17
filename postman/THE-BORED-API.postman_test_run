@@ -1,0 +1,478 @@
+{
+	"id": "9c67bef9-aa7f-4983-8aa7-3a7ea1667ad5",
+	"name": "THE BORED API",
+	"timestamp": "2023-02-17T18:02:45.493Z",
+	"collection_id": "25771376-d73cdcb9-21ce-4959-ad3c-83c16a0a4418",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 79,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2023-02-17T18:02:35.653Z",
+	"totalFail": 1,
+	"results": [
+		{
+			"id": "43b670b9-0692-4e5f-9dd6-f9f4ae2be88d",
+			"name": "Get a random event",
+			"url": "http://www.boredapi.com/api/activity/",
+			"time": 138,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 200ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 5,
+					"fail": 0
+				},
+				"Response time is less than 200ms": {
+					"pass": 4,
+					"fail": 1
+				}
+			},
+			"times": [
+				407,
+				139,
+				137,
+				139,
+				138
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 200ms": false
+				},
+				{
+					"Status code is 200": true,
+					"Response time is less than 200ms": true
+				},
+				{
+					"Status code is 200": true,
+					"Response time is less than 200ms": true
+				},
+				{
+					"Status code is 200": true,
+					"Response time is less than 200ms": true
+				},
+				{
+					"Status code is 200": true,
+					"Response time is less than 200ms": true
+				}
+			]
+		},
+		{
+			"id": "523172b1-c9a2-4020-9bf9-c4f6fd85f6bd",
+			"name": "Find an activity by its key",
+			"url": "http://www.boredapi.com/api/activity?key=3829791",
+			"time": 147,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 200ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 5,
+					"fail": 0
+				},
+				"Response time is less than 200ms": {
+					"pass": 5,
+					"fail": 0
+				}
+			},
+			"times": [
+				140,
+				137,
+				138,
+				137,
+				147
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 200ms": true
+				},
+				{
+					"Status code is 200": true,
+					"Response time is less than 200ms": true
+				},
+				{
+					"Status code is 200": true,
+					"Response time is less than 200ms": true
+				},
+				{
+					"Status code is 200": true,
+					"Response time is less than 200ms": true
+				},
+				{
+					"Status code is 200": true,
+					"Response time is less than 200ms": true
+				}
+			]
+		},
+		{
+			"id": "76160341-d1c7-4ad6-ae01-6ed0c1731e4e",
+			"name": "Find a random activity with a given type",
+			"url": "http://www.boredapi.com/api/activity?type=music",
+			"time": 137,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 200ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 5,
+					"fail": 0
+				},
+				"Response time is less than 200ms": {
+					"pass": 5,
+					"fail": 0
+				}
+			},
+			"times": [
+				140,
+				147,
+				149,
+				156,
+				137
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 200ms": true
+				},
+				{
+					"Status code is 200": true,
+					"Response time is less than 200ms": true
+				},
+				{
+					"Status code is 200": true,
+					"Response time is less than 200ms": true
+				},
+				{
+					"Status code is 200": true,
+					"Response time is less than 200ms": true
+				},
+				{
+					"Status code is 200": true,
+					"Response time is less than 200ms": true
+				}
+			]
+		},
+		{
+			"id": "3ab01441-9498-48fd-84b7-22647163147c",
+			"name": "Find a random activity with a given number of participants",
+			"url": "http://www.boredapi.com/api/activity?participants=1",
+			"time": 139,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 200ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 5,
+					"fail": 0
+				},
+				"Response time is less than 200ms": {
+					"pass": 5,
+					"fail": 0
+				}
+			},
+			"times": [
+				139,
+				138,
+				137,
+				138,
+				139
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 200ms": true
+				},
+				{
+					"Status code is 200": true,
+					"Response time is less than 200ms": true
+				},
+				{
+					"Status code is 200": true,
+					"Response time is less than 200ms": true
+				},
+				{
+					"Status code is 200": true,
+					"Response time is less than 200ms": true
+				},
+				{
+					"Status code is 200": true,
+					"Response time is less than 200ms": true
+				}
+			]
+		},
+		{
+			"id": "5945d53a-4e9d-40be-819d-dcff219d5cb2",
+			"name": "Find an activity with a specified price",
+			"url": "http://www.boredapi.com/api/activity?price=0.3",
+			"time": 141,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 200ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 5,
+					"fail": 0
+				},
+				"Response time is less than 200ms": {
+					"pass": 5,
+					"fail": 0
+				}
+			},
+			"times": [
+				139,
+				142,
+				140,
+				139,
+				141
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 200ms": true
+				},
+				{
+					"Status code is 200": true,
+					"Response time is less than 200ms": true
+				},
+				{
+					"Status code is 200": true,
+					"Response time is less than 200ms": true
+				},
+				{
+					"Status code is 200": true,
+					"Response time is less than 200ms": true
+				},
+				{
+					"Status code is 200": true,
+					"Response time is less than 200ms": true
+				}
+			]
+		},
+		{
+			"id": "35ada7bf-dc03-4409-8024-88a5b5ea42e9",
+			"name": "Find an event with a specified price in an inclusively constrained range",
+			"url": "http://www.boredapi.com/api/activity?minprice=0.65&maxprice=0.77",
+			"time": 148,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 200ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 5,
+					"fail": 0
+				},
+				"Response time is less than 200ms": {
+					"pass": 5,
+					"fail": 0
+				}
+			},
+			"times": [
+				177,
+				145,
+				138,
+				140,
+				148
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 200ms": true
+				},
+				{
+					"Status code is 200": true,
+					"Response time is less than 200ms": true
+				},
+				{
+					"Status code is 200": true,
+					"Response time is less than 200ms": true
+				},
+				{
+					"Status code is 200": true,
+					"Response time is less than 200ms": true
+				},
+				{
+					"Status code is 200": true,
+					"Response time is less than 200ms": true
+				}
+			]
+		},
+		{
+			"id": "0b7e0570-3d14-4acd-b5a8-0ea2ad84751b",
+			"name": "Find an event with a specified accessibility",
+			"url": "http://www.boredapi.com/api/activity?accessibility=0.4",
+			"time": 139,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 200ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 5,
+					"fail": 0
+				},
+				"Response time is less than 200ms": {
+					"pass": 5,
+					"fail": 0
+				}
+			},
+			"times": [
+				143,
+				149,
+				138,
+				141,
+				139
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 200ms": true
+				},
+				{
+					"Status code is 200": true,
+					"Response time is less than 200ms": true
+				},
+				{
+					"Status code is 200": true,
+					"Response time is less than 200ms": true
+				},
+				{
+					"Status code is 200": true,
+					"Response time is less than 200ms": true
+				},
+				{
+					"Status code is 200": true,
+					"Response time is less than 200ms": true
+				}
+			]
+		},
+		{
+			"id": "a2974896-364a-4cf5-a5b3-26e95e7392b4",
+			"name": "Find an event with a specified accessibility in an inclusively constrained range",
+			"url": "http://www.boredapi.com/api/activity?minaccessibility=0.2&maxaccessibility=0.6",
+			"time": 139,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 200ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 5,
+					"fail": 0
+				},
+				"Response time is less than 200ms": {
+					"pass": 5,
+					"fail": 0
+				}
+			},
+			"times": [
+				139,
+				139,
+				140,
+				141,
+				139
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 200ms": true
+				},
+				{
+					"Status code is 200": true,
+					"Response time is less than 200ms": true
+				},
+				{
+					"Status code is 200": true,
+					"Response time is less than 200ms": true
+				},
+				{
+					"Status code is 200": true,
+					"Response time is less than 200ms": true
+				},
+				{
+					"Status code is 200": true,
+					"Response time is less than 200ms": true
+				}
+			]
+		}
+	],
+	"count": 5,
+	"totalTime": 5936,
+	"collection": {
+		"requests": [
+			{
+				"id": "43b670b9-0692-4e5f-9dd6-f9f4ae2be88d",
+				"method": "GET"
+			},
+			{
+				"id": "523172b1-c9a2-4020-9bf9-c4f6fd85f6bd",
+				"method": "GET"
+			},
+			{
+				"id": "76160341-d1c7-4ad6-ae01-6ed0c1731e4e",
+				"method": "GET"
+			},
+			{
+				"id": "3ab01441-9498-48fd-84b7-22647163147c",
+				"method": "GET"
+			},
+			{
+				"id": "5945d53a-4e9d-40be-819d-dcff219d5cb2",
+				"method": "GET"
+			},
+			{
+				"id": "35ada7bf-dc03-4409-8024-88a5b5ea42e9",
+				"method": "GET"
+			},
+			{
+				"id": "0b7e0570-3d14-4acd-b5a8-0ea2ad84751b",
+				"method": "GET"
+			},
+			{
+				"id": "a2974896-364a-4cf5-a5b3-26e95e7392b4",
+				"method": "GET"
+			}
+		]
+	}
+}

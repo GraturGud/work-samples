@@ -1,0 +1,467 @@
+{
+	"info": {
+		"_postman_id": "d73cdcb9-21ce-4959-ad3c-83c16a0a4418",
+		"name": "THE BORED API",
+		"description": "### Let's find you something to do",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25771376"
+	},
+	"item": [
+		{
+			"name": "Get a random event",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://www.boredapi.com/api/activity/",
+					"protocol": "http",
+					"host": [
+						"www",
+						"boredapi",
+						"com"
+					],
+					"path": [
+						"api",
+						"activity",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find an activity by its key",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"pm.collectionVariables.set (\"randomNum\", _.random (1000000,9999999));"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://www.boredapi.com/api/activity?key={{randomNum}}",
+					"protocol": "http",
+					"host": [
+						"www",
+						"boredapi",
+						"com"
+					],
+					"path": [
+						"api",
+						"activity"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "{{randomNum}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find a random activity with a given type",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"const textValues = [\"education\",\"recreational\",\"social\",\"diy\",\"charity\",\"cooking\",\"relaxation\",\"music\",\"busywork\"];\r",
+							"\r",
+							"const randomTextValue = _.sample(textValues);\r",
+							"\r",
+							"pm.collectionVariables.set(\"randomActivity\", randomTextValue);"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://www.boredapi.com/api/activity?type={{randomActivity}}",
+					"protocol": "http",
+					"host": [
+						"www",
+						"boredapi",
+						"com"
+					],
+					"path": [
+						"api",
+						"activity"
+					],
+					"query": [
+						{
+							"key": "type",
+							"value": "{{randomActivity}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find a random activity with a given number of participants",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"pm.collectionVariables.set (\"randomNum\", _.random (1,10));"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://www.boredapi.com/api/activity?participants={{randomNum}}",
+					"protocol": "http",
+					"host": [
+						"www",
+						"boredapi",
+						"com"
+					],
+					"path": [
+						"api",
+						"activity"
+					],
+					"query": [
+						{
+							"key": "participants",
+							"value": "{{randomNum}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find an activity with a specified price",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"pm.collectionVariables.set (\"randomNum\", _.random (0.01,1).toFixed(1));"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://www.boredapi.com/api/activity?price={{randomNum}}",
+					"protocol": "http",
+					"host": [
+						"www",
+						"boredapi",
+						"com"
+					],
+					"path": [
+						"api",
+						"activity"
+					],
+					"query": [
+						{
+							"key": "price",
+							"value": "{{randomNum}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find an event with a specified price in an inclusively constrained range",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"let minPrice = _.random(0.01, 1).toFixed(2);\r",
+							"let maxPrice = _.random(0.01, 1).toFixed(2);\r",
+							"\r",
+							"while (maxPrice <= minPrice) {\r",
+							"    maxPrice = _.random(0.01, 1).toFixed(2);\r",
+							"}\r",
+							"\r",
+							"pm.collectionVariables.set(\"minPrice\", minPrice);\r",
+							"pm.collectionVariables.set(\"maxPrice\", maxPrice);"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://www.boredapi.com/api/activity?minprice={{minPrice}}&maxprice={{maxPrice}}",
+					"protocol": "http",
+					"host": [
+						"www",
+						"boredapi",
+						"com"
+					],
+					"path": [
+						"api",
+						"activity"
+					],
+					"query": [
+						{
+							"key": "minprice",
+							"value": "{{minPrice}}"
+						},
+						{
+							"key": "maxprice",
+							"value": "{{maxPrice}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find an event with a specified accessibility",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"pm.collectionVariables.set (\"randomNum\", _.random (0.01,1).toFixed(1));"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://www.boredapi.com/api/activity?accessibility={{randomNum}}",
+					"protocol": "http",
+					"host": [
+						"www",
+						"boredapi",
+						"com"
+					],
+					"path": [
+						"api",
+						"activity"
+					],
+					"query": [
+						{
+							"key": "accessibility",
+							"value": "{{randomNum}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find an event with a specified accessibility in an inclusively constrained range",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"let minAcc = _.random(0.1, 1).toFixed(1);\r",
+							"let maxAcc = _.random(0.1, 1).toFixed(1);\r",
+							"\r",
+							"while (maxAcc <= minAcc) {\r",
+							"    maxAcc = _.random(0.1, 1).toFixed(1);\r",
+							"}\r",
+							"\r",
+							"pm.collectionVariables.set(\"minAcc\", minAcc);\r",
+							"pm.collectionVariables.set(\"maxAcc\", maxAcc);"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://www.boredapi.com/api/activity?minaccessibility={{minAcc}}&maxaccessibility={{maxAcc}}",
+					"protocol": "http",
+					"host": [
+						"www",
+						"boredapi",
+						"com"
+					],
+					"path": [
+						"api",
+						"activity"
+					],
+					"query": [
+						{
+							"key": "minaccessibility",
+							"value": "{{minAcc}}"
+						},
+						{
+							"key": "maxaccessibility",
+							"value": "{{maxAcc}}"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "randomActivity",
+			"value": ""
+		},
+		{
+			"key": "randomNum",
+			"value": ""
+		},
+		{
+			"key": "minAcc",
+			"value": ""
+		},
+		{
+			"key": "maxAcc",
+			"value": ""
+		},
+		{
+			"key": "minPrice",
+			"value": ""
+		},
+		{
+			"key": "maxPrice",
+			"value": ""
+		}
+	]
+}
