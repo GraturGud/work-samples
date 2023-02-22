@@ -1,4 +1,4 @@
-/*Вывод имен и должностей сотрудников, сведения о том сколько человек у них в прямом подчинении*/
+/*Listing employees having a managerial position and specifying the amount of people reporting directly to them*/
 SELECT 
     m.firstName AS bossFirstname,
     m.lastName AS bossLastName,

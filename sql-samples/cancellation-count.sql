@@ -1,4 +1,4 @@
-/*Вывод наименований и линейки продуктов с указанием кол-ва на складе и кол-ва отмен*/
+/*Counting the amount of cancellations for a product and specifying each listed product's product line and amount in stock*/
 SELECT 
     products.productName AS prodName,
     products.productLine AS prodLine,

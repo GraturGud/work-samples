@@ -1,4 +1,4 @@
-/*Вывод имен и должностей сотрудников, сведения о том имеют ли они подчиненных, имена и должности их прямых начальников*/
+/*Listing employees' names and positions, specifying if they have a managerial position and providing information about their bosses*/
 SELECT 
     e.firstName AS empFirstname,
     e.lastName AS empLastName,

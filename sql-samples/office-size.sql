@@ -1,4 +1,4 @@
-/*Вывод всех офисов с указанием ID, страны, города, телефона и кол-вом сотрудников*/
+/*Listing all company offices and specifying their ID, country, city, phone N and the amount of employees working there*/
 SELECT 
     offices.officeCode AS officeCode,
     offices.country AS officeCountry,

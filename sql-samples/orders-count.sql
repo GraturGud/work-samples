@@ -1,4 +1,4 @@
-/*Вывод id покупателя, наименование покупателя, подсчет доставленных заказов, заказов в пути, отмененных заказов, удержанных заказов, оспариваемых заказов и решенных заказов*/
+/*Listing buyer's id and name, counting the amount of orders delivered/in process/canceeled/on hold/disputed/resolved*/
 SELECT 
     customers.customerNumber,
     customers.customerName,
