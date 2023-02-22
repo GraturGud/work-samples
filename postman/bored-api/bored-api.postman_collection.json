@@ -1,7 +1,7 @@
 {
 	"info": {
 		"_postman_id": "d73cdcb9-21ce-4959-ad3c-83c16a0a4418",
-		"name": "THE BORED API",
+		"name": "bored-api",
 		"description": "### Let's find you something to do",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "25771376"
