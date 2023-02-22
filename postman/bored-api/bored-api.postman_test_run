@@ -1,22 +1,22 @@
 {
-	"id": "31588698-93b9-436c-957b-e36c7586fdca",
-	"name": "THE BORED API",
-	"timestamp": "2023-02-17T20:05:17.899Z",
+	"id": "2e152dde-4e2c-4684-aa05-449850989409",
+	"name": "bored-api",
+	"timestamp": "2023-02-22T14:45:37.095Z",
 	"collection_id": "25771376-d73cdcb9-21ce-4959-ad3c-83c16a0a4418",
 	"folder_id": 0,
 	"environment_id": "0",
-	"totalPass": 111,
+	"totalPass": 110,
 	"delay": 0,
 	"persist": true,
 	"status": "finished",
-	"startedAt": "2023-02-17T20:05:08.846Z",
-	"totalFail": 9,
+	"startedAt": "2023-02-22T14:45:27.618Z",
+	"totalFail": 10,
 	"results": [
 		{
 			"id": "43b670b9-0692-4e5f-9dd6-f9f4ae2be88d",
 			"name": "Get a random event",
 			"url": "http://www.boredapi.com/api/activity/",
-			"time": 138,
+			"time": 126,
 			"responseCode": {
 				"code": 200,
 				"name": "OK"
@@ -32,8 +32,8 @@
 					"fail": 0
 				},
 				"Response time is less than 200ms": {
-					"pass": 5,
-					"fail": 0
+					"pass": 4,
+					"fail": 1
 				},
 				"Body matches all of the expected values": {
 					"pass": 5,
@@ -41,16 +41,16 @@
 				}
 			},
 			"times": [
-				140,
-				137,
-				145,
-				140,
-				138
+				500,
+				133,
+				124,
+				127,
+				126
 			],
 			"allTests": [
 				{
 					"Status code is 200": true,
-					"Response time is less than 200ms": true,
+					"Response time is less than 200ms": false,
 					"Body matches all of the expected values": true
 				},
 				{
@@ -78,8 +78,8 @@
 		{
 			"id": "523172b1-c9a2-4020-9bf9-c4f6fd85f6bd",
 			"name": "Find an activity by its key",
-			"url": "http://www.boredapi.com/api/activity?key=5874710",
-			"time": 140,
+			"url": "http://www.boredapi.com/api/activity?key=2985092",
+			"time": 122,
 			"responseCode": {
 				"code": 200,
 				"name": "OK"
@@ -104,11 +104,11 @@
 				}
 			},
 			"times": [
-				138,
-				136,
-				136,
-				137,
-				140
+				124,
+				122,
+				124,
+				125,
+				122
 			],
 			"allTests": [
 				{
@@ -141,8 +141,8 @@
 		{
 			"id": "76160341-d1c7-4ad6-ae01-6ed0c1731e4e",
 			"name": "Find a random activity with a given type",
-			"url": "http://www.boredapi.com/api/activity?type=diy",
-			"time": 142,
+			"url": "http://www.boredapi.com/api/activity?type=education",
+			"time": 129,
 			"responseCode": {
 				"code": 200,
 				"name": "OK"
@@ -167,11 +167,11 @@
 				}
 			},
 			"times": [
-				138,
-				141,
-				150,
-				138,
-				142
+				128,
+				134,
+				126,
+				127,
+				129
 			],
 			"allTests": [
 				{
@@ -204,8 +204,134 @@
 		{
 			"id": "3ab01441-9498-48fd-84b7-22647163147c",
 			"name": "Find a random activity with a given number of participants",
-			"url": "http://www.boredapi.com/api/activity?participants=2",
-			"time": 145,
+			"url": "http://www.boredapi.com/api/activity?participants=5",
+			"time": 124,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 200ms": true,
+				"Body matches all of the expected values": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 5,
+					"fail": 0
+				},
+				"Response time is less than 200ms": {
+					"pass": 5,
+					"fail": 0
+				},
+				"Body matches all of the expected values": {
+					"pass": 4,
+					"fail": 1
+				}
+			},
+			"times": [
+				124,
+				131,
+				126,
+				130,
+				124
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 200ms": true,
+					"Body matches all of the expected values": false
+				},
+				{
+					"Status code is 200": true,
+					"Response time is less than 200ms": true,
+					"Body matches all of the expected values": true
+				},
+				{
+					"Status code is 200": true,
+					"Response time is less than 200ms": true,
+					"Body matches all of the expected values": true
+				},
+				{
+					"Status code is 200": true,
+					"Response time is less than 200ms": true,
+					"Body matches all of the expected values": true
+				},
+				{
+					"Status code is 200": true,
+					"Response time is less than 200ms": true,
+					"Body matches all of the expected values": true
+				}
+			]
+		},
+		{
+			"id": "5945d53a-4e9d-40be-819d-dcff219d5cb2",
+			"name": "Find an activity with a specified price",
+			"url": "http://www.boredapi.com/api/activity?price=0.2",
+			"time": 130,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 200ms": true,
+				"Body matches all of the expected values": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 5,
+					"fail": 0
+				},
+				"Response time is less than 200ms": {
+					"pass": 5,
+					"fail": 0
+				},
+				"Body matches all of the expected values": {
+					"pass": 5,
+					"fail": 0
+				}
+			},
+			"times": [
+				126,
+				127,
+				125,
+				124,
+				130
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 200ms": true,
+					"Body matches all of the expected values": true
+				},
+				{
+					"Status code is 200": true,
+					"Response time is less than 200ms": true,
+					"Body matches all of the expected values": true
+				},
+				{
+					"Status code is 200": true,
+					"Response time is less than 200ms": true,
+					"Body matches all of the expected values": true
+				},
+				{
+					"Status code is 200": true,
+					"Response time is less than 200ms": true,
+					"Body matches all of the expected values": true
+				},
+				{
+					"Status code is 200": true,
+					"Response time is less than 200ms": true,
+					"Body matches all of the expected values": true
+				}
+			]
+		},
+		{
+			"id": "35ada7bf-dc03-4409-8024-88a5b5ea42e9",
+			"name": "Find an event with a specified price in an inclusively constrained range",
+			"url": "http://www.boredapi.com/api/activity?minprice=0.38&maxprice=0.99",
+			"time": 129,
 			"responseCode": {
 				"code": 200,
 				"name": "OK"
@@ -230,74 +356,11 @@
 				}
 			},
 			"times": [
-				162,
-				136,
-				146,
+				149,
+				125,
 				139,
-				145
-			],
-			"allTests": [
-				{
-					"Status code is 200": true,
-					"Response time is less than 200ms": true,
-					"Body matches all of the expected values": true
-				},
-				{
-					"Status code is 200": true,
-					"Response time is less than 200ms": true,
-					"Body matches all of the expected values": false
-				},
-				{
-					"Status code is 200": true,
-					"Response time is less than 200ms": true,
-					"Body matches all of the expected values": false
-				},
-				{
-					"Status code is 200": true,
-					"Response time is less than 200ms": true,
-					"Body matches all of the expected values": true
-				},
-				{
-					"Status code is 200": true,
-					"Response time is less than 200ms": true,
-					"Body matches all of the expected values": true
-				}
-			]
-		},
-		{
-			"id": "5945d53a-4e9d-40be-819d-dcff219d5cb2",
-			"name": "Find an activity with a specified price",
-			"url": "http://www.boredapi.com/api/activity?price=0.9",
-			"time": 146,
-			"responseCode": {
-				"code": 200,
-				"name": "OK"
-			},
-			"tests": {
-				"Status code is 200": true,
-				"Response time is less than 200ms": true,
-				"Body matches all of the expected values": false
-			},
-			"testPassFailCounts": {
-				"Status code is 200": {
-					"pass": 5,
-					"fail": 0
-				},
-				"Response time is less than 200ms": {
-					"pass": 5,
-					"fail": 0
-				},
-				"Body matches all of the expected values": {
-					"pass": 4,
-					"fail": 1
-				}
-			},
-			"times": [
-				140,
-				165,
-				141,
-				144,
-				146
+				125,
+				129
 			],
 			"allTests": [
 				{
@@ -313,88 +376,25 @@
 				{
 					"Status code is 200": true,
 					"Response time is less than 200ms": true,
-					"Body matches all of the expected values": true
-				},
-				{
-					"Status code is 200": true,
-					"Response time is less than 200ms": true,
-					"Body matches all of the expected values": true
+					"Body matches all of the expected values": false
 				},
 				{
 					"Status code is 200": true,
 					"Response time is less than 200ms": true,
 					"Body matches all of the expected values": false
-				}
-			]
-		},
-		{
-			"id": "35ada7bf-dc03-4409-8024-88a5b5ea42e9",
-			"name": "Find an event with a specified price in an inclusively constrained range",
-			"url": "http://www.boredapi.com/api/activity?minprice=0.73&maxprice=0.77",
-			"time": 137,
-			"responseCode": {
-				"code": 200,
-				"name": "OK"
-			},
-			"tests": {
-				"Status code is 200": true,
-				"Response time is less than 200ms": true,
-				"Body matches all of the expected values": false
-			},
-			"testPassFailCounts": {
-				"Status code is 200": {
-					"pass": 5,
-					"fail": 0
-				},
-				"Response time is less than 200ms": {
-					"pass": 5,
-					"fail": 0
-				},
-				"Body matches all of the expected values": {
-					"pass": 4,
-					"fail": 1
-				}
-			},
-			"times": [
-				139,
-				154,
-				140,
-				142,
-				137
-			],
-			"allTests": [
-				{
-					"Status code is 200": true,
-					"Response time is less than 200ms": true,
-					"Body matches all of the expected values": true
 				},
 				{
 					"Status code is 200": true,
 					"Response time is less than 200ms": true,
 					"Body matches all of the expected values": true
-				},
-				{
-					"Status code is 200": true,
-					"Response time is less than 200ms": true,
-					"Body matches all of the expected values": true
-				},
-				{
-					"Status code is 200": true,
-					"Response time is less than 200ms": true,
-					"Body matches all of the expected values": true
-				},
-				{
-					"Status code is 200": true,
-					"Response time is less than 200ms": true,
-					"Body matches all of the expected values": false
 				}
 			]
 		},
 		{
 			"id": "0b7e0570-3d14-4acd-b5a8-0ea2ad84751b",
 			"name": "Find an event with a specified accessibility",
-			"url": "http://www.boredapi.com/api/activity?accessibility=0.6",
-			"time": 146,
+			"url": "http://www.boredapi.com/api/activity?accessibility=0.2",
+			"time": 128,
 			"responseCode": {
 				"code": 200,
 				"name": "OK"
@@ -410,8 +410,8 @@
 					"fail": 0
 				},
 				"Response time is less than 200ms": {
-					"pass": 5,
-					"fail": 0
+					"pass": 4,
+					"fail": 1
 				},
 				"Body matches all of the expected values": {
 					"pass": 5,
@@ -419,11 +419,11 @@
 				}
 			},
 			"times": [
-				142,
-				140,
-				143,
-				148,
-				146
+				126,
+				125,
+				486,
+				127,
+				128
 			],
 			"allTests": [
 				{
@@ -438,7 +438,7 @@
 				},
 				{
 					"Status code is 200": true,
-					"Response time is less than 200ms": true,
+					"Response time is less than 200ms": false,
 					"Body matches all of the expected values": true
 				},
 				{
@@ -456,8 +456,8 @@
 		{
 			"id": "a2974896-364a-4cf5-a5b3-26e95e7392b4",
 			"name": "Find an event with a specified accessibility in an inclusively constrained range",
-			"url": "http://www.boredapi.com/api/activity?minaccessibility=0.7&maxaccessibility=0.8",
-			"time": 139,
+			"url": "http://www.boredapi.com/api/activity?minaccessibility=0.2&maxaccessibility=0.4",
+			"time": 125,
 			"responseCode": {
 				"code": 200,
 				"name": "OK"
@@ -482,11 +482,11 @@
 				}
 			},
 			"times": [
-				143,
-				140,
-				141,
-				138,
-				139
+				126,
+				127,
+				126,
+				125,
+				125
 			],
 			"allTests": [
 				{
@@ -518,7 +518,7 @@
 		}
 	],
 	"count": 5,
-	"totalTime": 5692,
+	"totalTime": 5826,
 	"collection": {
 		"requests": [
 			{
