@@ -1,0 +1,461 @@
+{
+	"info": {
+		"_postman_id": "5e69311f-f702-4559-859a-d7bad3d2fd38",
+		"name": "Practicum",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25771376"
+	},
+	"item": [
+		{
+			"name": "cart",
+			"item": [
+				{
+					"name": "creating a cart",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productsList\": [\r\n        {\r\n            \"id\": 1,\r\n            \"quantity\": 1\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server_url}}/api/v1/orders",
+							"host": [
+								"{{server_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"orders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "adding products",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productsList\": [\r\n        {\r\n            \"id\": 1,\r\n            \"quantity\": 1\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server_url}}/api/v1/orders/10",
+							"host": [
+								"{{server_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"orders",
+								"10"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getting the list of products",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server_url}}/api/v1/orders/20",
+							"host": [
+								"{{server_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"orders",
+								"20"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleting a cart",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{server_url}}/api/v1/orders/",
+							"host": [
+								"{{server_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"orders",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "logs",
+			"item": [
+				{
+					"name": "all logs",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server_url}}/api/logs/main",
+							"host": [
+								"{{server_url}}"
+							],
+							"path": [
+								"api",
+								"logs",
+								"main"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "warehouse logs",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server_url}}/api/logs/secondary",
+							"host": [
+								"{{server_url}}"
+							],
+							"path": [
+								"api",
+								"logs",
+								"secondary"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "product sets",
+			"item": [
+				{
+					"name": "creating empty set",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cardId\": 1, \r\n    \"name\": \"В космос\" \r\n} ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server_url}}/api/v1/kits",
+							"host": [
+								"{{server_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"kits"
+							],
+							"query": [
+								{
+									"key": "cardId",
+									"value": "1",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get the list of sets from a product card",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server_url}}/api/v1/kits?cardId=1",
+							"host": [
+								"{{server_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"kits"
+							],
+							"query": [
+								{
+									"key": "cardId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get the list of sets based on product",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ids\": [\r\n        1,\r\n        22\r\n    ]\r\n} ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server_url}}/api/v1/products/kits",
+							"host": [
+								"{{server_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"products",
+								"kits"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "adding products to a set",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productsList\": [\r\n        {\r\n            \"id\": 1,\r\n            \"quantity\": 2\r\n        },\r\n        {\r\n            \"id\": 6,\r\n            \"quantity\": 2\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server_url}}/api/v1/kits/1/products",
+							"host": [
+								"{{server_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"kits",
+								"1",
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "editing a set",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Мой изменённый набор\",\r\n    \"productsList\": [\r\n        {\r\n            \"id\": 1,\r\n            \"quantity\": 4\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server_url}}/api/v1/kits/2",
+							"host": [
+								"{{server_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"kits",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "products",
+			"item": [
+				{
+					"name": "get a list of products based on the set name",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server_url}}/api/v1/kits/search?name=В+космос",
+							"host": [
+								"{{server_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"kits",
+								"search"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "В+космос"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Checking products availability in «Чердак» warehouse",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<InputModel>\r\n    <deliveryTime>9</deliveryTime>\r\n    <product id=\"4\" quantity=\"2\" />\r\n    <product id=\"48\" quantity=\"2\" />\r\n</InputModel>",
+							"options": {
+								"raw": {
+									"language": "xml"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server_url}}/attic/calculate.xml",
+							"host": [
+								"{{server_url}}"
+							],
+							"path": [
+								"attic",
+								"calculate.xml"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Checking products availability in all warehouses",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"products\": [\r\n        {\r\n            \"id\": 1,\r\n            \"quantity\": 2\r\n        }\r\n    ]\r\n} ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server_url}}/api/v1/warehouses/check",
+							"host": [
+								"{{server_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"warehouses",
+								"check"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Checking products availability in \"Большой мир\" warehouse",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"  xmlns:tns=\"WebServices.WarehouseWsdl\">\r\n    <soap:Body>\r\n        <tns:checkSupply>\r\n            <tns:products>\r\n                <tns:products>\r\n                    <id>2</id>\r\n                    <quantity>1</quantity>\r\n                </tns:products>\r\n                <tns:products>\r\n                    <id>49</id>\r\n                    <quantity>1</quantity>\r\n                </tns:products>\r\n            </tns:products>\r\n            <tns:deliveryTime>10</tns:deliveryTime>\r\n        </tns:checkSupply>\r\n    </soap:Body>\r\n</soap:Envelope>",
+							"options": {
+								"raw": {
+									"language": "xml"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server_url}}/big-world/wsdl",
+							"host": [
+								"{{server_url}}"
+							],
+							"path": [
+								"big-world",
+								"wsdl"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "couriers",
+			"item": [
+				{
+					"name": "Couriers - \"Привезём быстро\" delivery",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "<InputModel>\r\n    <productsCount>2</productsCount>\r\n    <productsWeight>5.115</productsWeight>\r\n    <deliveryTime>20</deliveryTime>\r\n</InputModel>",
+							"options": {
+								"raw": {
+									"language": "xml"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server_url}}/fast-delivery/v3.1.1/calculate-delivery.xml",
+							"host": [
+								"{{server_url}}"
+							],
+							"path": [
+								"fast-delivery",
+								"v3.1.1",
+								"calculate-delivery.xml"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "server_url",
+			"value": "test_stand_url"
+		}
+	]
+}
